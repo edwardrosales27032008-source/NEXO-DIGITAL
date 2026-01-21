@@ -1,0 +1,103 @@
+---
+/* src/components/SobreMi.astro */
+import { Sobremicard } from '../components/sobremicard';
+---
+<section id="nosotros" class="py-16 md:py-24 bg-[#020617] border-y border-white/5 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+    
+    <div class="text-center md:text-left">
+      <h2 class="text-3xl sm:text-4xl md:text-6xl font-black uppercase italic mb-6 text-white tracking-tighter leading-none">
+        <span class="text-cyan-400">Detrás del Código</span>
+      </h2>
+      <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
+        Desarrollador de software peruano de 18 años. Construyo soluciones digitales de alto rendimiento con diseño moderno y arquitectura escalable para cualquier rubro.
+      </p>
+
+    {/* IMPORTANTE: Iniciamos en 0% y usamos client:visible para que cargue al verlo */}
+<div class="flex flex-row justify-center md:justify-start gap-3 md:gap-4">
+  <Sobremicard 
+    titulo="100%" 
+    subtitulo="Lógica" 
+    color="cyan" 
+    client:load 
+  />
+
+  <Sobremicard 
+    titulo="PERÚ" 
+    subtitulo="Sede" 
+    color="slate" 
+    client:load 
+  />
+</div>
+    </div>
+
+    <div class="relative h-[400px] md:h-[600px] bg-black border border-white/10 overflow-hidden group w-full">
+      <div id="slider" class="flex h-full transition-transform duration-500 ease-out will-change-transform">
+        <img src="/sobremi1.jpeg" alt="Sobre mi 1" class="min-w-full h-full object-cover" />
+        <img src="/sobremi2.jpeg" alt="Sobre mi 2" class="min-w-full h-full object-cover" />
+        <img src="/sobremi3.jpeg" alt="Sobre mi 3" class="min-w-full h-full object-cover" />
+        <img src="/sobremi4.jpeg" alt="Sobre mi 4" class="min-w-full h-full object-cover" />
+        <img src="/sobremi5.jpeg" alt="Sobre mi 5" class="min-w-full h-full object-cover" />
+      </div>
+
+      <button id="p" class="absolute left-0 inset-y-0 px-4 md:px-6 text-white text-4xl md:text-6xl hover:bg-white/5 transition-all opacity-50 md:opacity-100">‹</button>
+      <button id="n" class="absolute right-0 inset-y-0 px-4 md:px-6 text-white text-4xl md:text-6xl hover:bg-white/5 transition-all opacity-50 md:opacity-100">›</button>
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  let i = 0;
+  const s = document.getElementById('slider');
+  const move = (d) => { 
+    if(!s) return;
+    i = (i + d + 5) % 5; 
+    s.style.transform = `translateX(-${i * 100}%)`; 
+  };
+  document.getElementById('p').onclick = () => move(-1);
+  document.getElementById('n').onclick = () => move(1);
+  
+  // Auto-slide cada 5 segundos
+  setInterval(() => move(1), 5000);
+
+  function iniciarContador() {
+    const card = document.getElementById('contador-logica');
+    
+    // Función que ejecuta el conteo
+    const startRunning = (numberSpan) => {
+      let count = 0;
+      const end = 100;
+      const duration = 2000;
+      const stepTime = duration / end;
+
+      const timer = setInterval(() => {
+        count++;
+        numberSpan.textContent = count + '%';
+
+        if (count >= end) {
+          clearInterval(timer);
+          numberSpan.classList.add('text-cyan-400', 'drop-shadow-[0_0_15px_rgba(34,211,238,1)]');
+          card.classList.add('shadow-[0_0_50px_rgba(34,211,238,0.3)]');
+        }
+      }, stepTime);
+    };
+
+    // Intentar encontrar el elemento hasta que aparezca (max 5 segundos)
+    let attempts = 0;
+    const checkExist = setInterval(() => {
+      const numberSpan = card?.querySelector('[data-target="number"]');
+      if (numberSpan) {
+        clearInterval(checkExist);
+        startRunning(numberSpan);
+      }
+      if (attempts > 50) clearInterval(checkExist); // Seguridad
+      attempts++;
+    }, 100);
+  }
+
+  // Se ejecuta al cargar la página
+  document.addEventListener('DOMContentLoaded', iniciarContador);
+  // Se ejecuta si usas transiciones de Astro
+  document.addEventListener('astro:page-load', iniciarContador);
+</script>

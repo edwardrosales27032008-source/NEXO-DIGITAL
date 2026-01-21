@@ -1,0 +1,49 @@
+---
+/* src/components/Proceso.astro */
+---
+<section class="relative py-16 md:py-32 overflow-hidden bg-black">
+  <div class="absolute inset-0 z-0 bg-[url('/proceso.jpg')] bg-cover bg-center md:bg-fixed">
+    <div class="absolute inset-0 bg-black/70 md:bg-black/60"></div>
+  </div>
+
+  <div class="absolute top-0 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-blue-500/10 blur-[80px] md:blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-0 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-cyan-500/10 blur-[80px] md:blur-[120px] pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
+    <h2 class="text-3xl sm:text-4xl md:text-6xl font-black uppercase italic mb-12 md:mb-20 text-white tracking-tighter text-center md:text-left">
+      Proceso <span class="text-slate-500 italic">de desarrollo</span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-white/10 border border-white/10">
+      
+      <div class="group bg-black/40 backdrop-blur-md p-8 md:p-10 transition-all hover:bg-white/[0.05]">
+        <span class="text-xs md:text-sm font-bold text-cyan-400 tracking-[0.3em]">01</span>
+        <h4 class="text-xl md:text-2xl font-black text-white mt-4 mb-4 uppercase italic">Estrategia</h4>
+        <p class="text-slate-400 text-sm leading-relaxed font-medium">Definición de objetivos, análisis de rubro y arquitectura de información.</p>
+        <div class="mt-8 h-1 w-0 bg-cyan-400 transition-all group-hover:w-full md:group-hover:w-full"></div>
+      </div>
+
+      <div class="group bg-black/40 backdrop-blur-md p-8 md:p-10 transition-all hover:bg-white/[0.05]">
+        <span class="text-xs md:text-sm font-bold text-cyan-400 tracking-[0.3em]">02</span>
+        <h4 class="text-xl md:text-2xl font-black text-white mt-4 mb-4 uppercase italic">Diseño UX/UI</h4>
+        <p class="text-slate-400 text-sm leading-relaxed font-medium">Interfaces limpias enfocadas en la conversión y experiencia de usuario.</p>
+        <div class="mt-8 h-1 w-0 bg-cyan-400 transition-all group-hover:w-full"></div>
+      </div>
+
+      <div class="group bg-black/40 backdrop-blur-md p-8 md:p-10 transition-all hover:bg-white/[0.05]">
+        <span class="text-xs md:text-sm font-bold text-cyan-400 tracking-[0.3em]">03</span>
+        <h4 class="text-xl md:text-2xl font-black text-white mt-4 mb-4 uppercase italic">Desarrollo</h4>
+        <p class="text-slate-400 text-sm leading-relaxed font-medium">Escritura de código limpio, escalable y optimizado para buscadores.</p>
+        <div class="mt-8 h-1 w-0 bg-cyan-400 transition-all group-hover:w-full"></div>
+      </div>
+
+      <div class="group bg-black/40 backdrop-blur-md p-8 md:p-10 transition-all hover:bg-white/[0.05]">
+        <span class="text-xs md:text-sm font-bold text-cyan-400 tracking-[0.3em]">04</span>
+        <h4 class="text-xl md:text-2xl font-black text-white mt-4 mb-4 uppercase italic">Despliegue</h4>
+        <p class="text-slate-400 text-sm leading-relaxed font-medium">Lanzamiento, optimización de velocidad final y soporte continuo.</p>
+        <div class="mt-8 h-1 w-0 bg-cyan-400 transition-all group-hover:w-full"></div>
+      </div>
+
+    </div>
+  </div>
+</section>

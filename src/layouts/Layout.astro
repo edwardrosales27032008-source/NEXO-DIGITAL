@@ -1,0 +1,46 @@
+---
+interface Props { title: string; }
+const { title } = Astro.props;
+import Footer from '../components/Footer.astro';
+---
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/jpeg" href="/icon.jpg" />
+        <title>{title}</title>
+        
+        <link href="https://fonts.cdnfonts.com/css/geist" rel="stylesheet">
+    </head>
+    <body class="bg-[#020617] text-white antialiased selection:bg-cyan-500/30 overflow-x-hidden w-full">
+        <main class="w-full">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>
+
+<style is:global>
+    /* Mantenemos solo lo esencial que Tailwind no cubre por defecto */
+    :root { --accent: #22d3ee; }
+    
+    body { 
+        font-family: 'Geist Sans', sans-serif;
+    }
+
+    /* Scrollbar minimalista compatible con Chrome/Safari */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #020617; }
+    ::-webkit-scrollbar-thumb { 
+        background: #1e293b; 
+        border-radius: 10px; 
+    }
+    ::-webkit-scrollbar-thumb:hover { background: #22d3ee; }
+
+    /* Corrección para evitar scroll horizontal accidental en móviles */
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+</style>
