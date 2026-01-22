@@ -5,29 +5,26 @@ const projects = [
   {
     id: 1,
     size: 'col-span-1 md:col-span-2 md:row-span-2',
-    // Nombre exacto con los 2 espacios de tu captura
-    video: '/public/Jean   Editor.mp4', 
+    // Nombre exacto de tu carpeta public (mayúsculas y espacios incluidos)
+    video: '/Jean   Editor', 
     title: 'Jean Editor Pro',
   },
   {
     id: 2,
     size: 'col-span-1 md:col-span-1 md:row-span-1',
-    // Nombre exacto con los 2 espacios
-    video: '/public/Limagloss   Carwash.mp4', 
+    video: '/Limagloss   Carwash', 
     title: 'Limagloss Carwash',
   },
   {
     id: 3,
     size: 'col-span-1 md:col-span-1 md:row-span-1',
-    // Nombre exacto con el espacio
-    video: '/public/Sistemacrítico   Estilobrutalista.mp4',
+    video: '/Sistemacrítico   Estilobrutalista',
     title: 'Estilo Brutalista',
   },
   {
     id: 4,
     size: 'col-span-1 md:col-span-1 md:row-span-1',
-    // Nombre exacto
-    video: '/public/Urubambaroasters Cafedeespecialidadlima.mp4',
+    video: '/Urubambaroasters Cafedeespecialidadlima',
     title: 'Urubamba Roasters',
   },
 ];
@@ -39,8 +36,6 @@ export const BentoGrid = () => {
         {projects.map((p) => (
           <motion.div
             key={p.id}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
             className={`relative group rounded-[2rem] overflow-hidden border border-white/10 ${p.size}`}
           >
             <video
@@ -51,7 +46,7 @@ export const BentoGrid = () => {
               preload="auto"
               className="w-full h-full object-cover"
             >
-              {/* Aquí se le añade el .mp4 automáticamente */}
+              {/* Vercel necesita la ruta directa desde la raíz, sin la palabra "public" */}
               <source src={`${p.video}.mp4`} type="video/mp4" />
             </video>
 
