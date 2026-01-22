@@ -6,28 +6,28 @@ const projects = [
     id: 1,
     size: 'col-span-1 md:col-span-2 md:row-span-2',
     // Nombre exacto con los 2 espacios de tu captura
-    video: '/public/Jean   Editor', 
+    video: '/public/Jean   Editor.mp4', 
     title: 'Jean Editor Pro',
   },
   {
     id: 2,
     size: 'col-span-1 md:col-span-1 md:row-span-1',
     // Nombre exacto con los 2 espacios
-    video: '/public/Limagloss   Carwash', 
+    video: '/public/Limagloss   Carwash.mp4', 
     title: 'Limagloss Carwash',
   },
   {
     id: 3,
     size: 'col-span-1 md:col-span-1 md:row-span-1',
     // Nombre exacto con el espacio
-    video: '/public/Sistemacrítico   Estilobrutalista',
+    video: '/public/Sistemacrítico   Estilobrutalista.mp4',
     title: 'Estilo Brutalista',
   },
   {
     id: 4,
     size: 'col-span-1 md:col-span-1 md:row-span-1',
     // Nombre exacto
-    video: '/public/Urubambaroasters Cafedeespecialidadlima',
+    video: '/public/Urubambaroasters Cafedeespecialidadlima.mp4',
     title: 'Urubamba Roasters',
   },
 ];
