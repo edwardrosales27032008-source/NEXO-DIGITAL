@@ -53,7 +53,7 @@ export const BentoGrid = () => {
   muted
   loop
   playsInline
-  preload="none" // <--- CAMBIO: Ahora sí mostrará el primer frame
+  preload="auto" // <--- CAMBIO: Ahora sí mostrará el primer frame
   className="w-full h-full object-cover z-0 relative"
 >
   <source src={`${p.video}.webm`} type="video/webm" />
