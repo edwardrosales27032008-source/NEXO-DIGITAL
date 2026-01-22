@@ -6,25 +6,25 @@ const projects = [
     id: 1,
     size: 'col-span-1 md:col-span-2 md:row-span-2',
     // Usamos el nombre exacto con espacios que sale en tu VS Code
-    video: '/public/JEAN _ Editor ', 
+    video: '/public/Jean   Editor', 
     title: 'Jean Editor Pro',
   },
   {
     id: 2,
     size: 'col-span-1 md:col-span-1 md:row-span-1',
-    video: '/public/LIMAGLOSS _ CarWash',
+    video: '/public/Limagloss   Carwash',
     title: 'Limagloss Carwash',
   },
   {
     id: 3,
     size: 'col-span-1 md:col-span-1 md:row-span-1',
-    video: '/public/SISTEMACRíTICO _ EstiloBrutalista',
+    video: '/public/Sistemacrítico   Estilobrutalista',
     title: 'Estilo Brutalista',
   },
   {
     id: 4,
     size: 'col-span-1 md:col-span-1 md:row-span-1',
-    video: '/public/UrubambaRoasters_CafeDeEspecialidadLima',
+    video: '/public/Urubambaroasters Cafedeespecialidadlima',
     title: 'Urubamba Roasters',
   },
 ];
