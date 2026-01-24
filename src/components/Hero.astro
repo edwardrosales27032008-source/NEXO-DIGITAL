@@ -1,24 +1,50 @@
 ---
-// Hero.astro - Nexo Digital (100% Tailwind CSS & Responsivo)
+// Hero.astro - Nexo Digital (Optimizado para Responsividad)
 ---
-<section class="relative min-h-screen flex flex-col items-center justify-center text-center bg-[#020617] overflow-hidden px-4 md:px-5">
-  <div class="absolute inset-0 z-0 bg-[url('/public/hero2.webp')] bg-cover bg-center opacity-40"></div>
-  <div class="absolute inset-0 z-1 bg-gradient-to-"></div>
-  
-  <div class="relative z-10 w-full max-w-7xl mx-auto">
-    <h1 class="text-[2.7rem] min-[375px]:text-[3.2rem] min-[428px]:text-[3.8rem] md:text-[8rem] font-black leading-[0.9] uppercase tracking-tighter text-white mb-[10px]">
-      NEXO <span class="bg-gradient-to-r from-white via-cyan-400 to-[#0891b2] bg-clip-text text-transparent">DIGITAL</span>
-    </h1>
-    
-    <p class="text-[#94a3b8] font-mono text-[0.65rem] min-[428px]:text-[0.75rem] md:text-[1.1rem] tracking-[0.1em] min-[428px]:tracking-[0.2em] uppercase mb-10 md:mb-[40px]">
-      Desarrollo Web & Código de Alto Performance
-    </p>
 
-    <div class="flex flex-col md:flex-row gap-3 md:gap-[24px] justify-center items-center w-full max-w-[320px] md:max-w-none mx-auto">
-      <a href="https://wa.me/+51936752893" 
-         class="w-full md:w-auto px-4 min-[428px]:px-5 md:px-[40px] py-[14px] md:py-[16px] bg-cyan-400 text-black font-black text-[0.75rem] min-[428px]:text-[0.85rem] md:text-base uppercase no-underline transition-transform hover:scale-105 active:scale-95 flex items-center justify-center">
-        Contactar Ahora <span class="ml-2">→</span>
-      </a>
+<section class="relative min-h-screen w-full overflow-hidden flex items-center justify-center bg-black">
+    
+    <div class="absolute inset-0 z-0">
+        <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            class="h-full w-full object-cover opacity-50">
+            <source src="/hero-bg.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/20 to-black/90"></div>
     </div>
-  </div>
+
+    <div class="relative z-10 text-center px-4 sm:px-6 w-full max-w-5xl mx-auto">
+        
+        <div class="mb-4 sm:mb-6 flex justify-center">
+            <span class="px-3 py-1 border border-[#00E5FF]/30 bg-[#00E5FF]/10 text-[#00E5FF] text-[9px] sm:text-xs font-bold tracking-[0.2em] uppercase rounded-full">
+                Elite Web Development
+            </span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter mb-4 leading-none text-white italic">
+            NEXO<span class="text-[#00E5FF] drop-shadow-[0_0_15px_rgba(0,229,255,0.5)]">DIGITAL</span>
+        </h1>
+
+        <p class="text-gray-400 text-sm sm:text-base md:text-xl mb-8 md:mb-10 max-w-md md:max-w-2xl mx-auto font-light leading-snug sm:leading-relaxed">
+            Soluciones digitales de alto impacto. <br class="hidden sm:block"> 
+            Código limpio y diseño orientado a resultados.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-5 justify-center items-center">
+            <a href="#contacto" class="w-full sm:w-auto px-10 py-4 bg-[#00E5FF] text-black font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-white transition-all duration-300 shadow-lg shadow-[#00E5FF]/20">
+                Iniciar Proyecto
+            </a>
+            <a href="#proyectos" class="w-full sm:w-auto px-10 py-4 border border-white/20 text-white font-semibold uppercase text-xs tracking-widest rounded-sm hover:bg-white/10 transition-all">
+                Portafolio
+            </a>
+        </div>
+    </div>
+
+    <div class="hidden sm:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center opacity-40">
+        <div class="w-[1px] h-12 bg-gradient-to-b from-[#00E5FF] to-transparent"></div>
+    </div>
+
 </section>
