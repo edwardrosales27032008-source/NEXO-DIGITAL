@@ -5,9 +5,9 @@ const projects = [
   {
     id: 1,
     size: 'col-span-1 md:col-span-2 md:row-span-2',
-    image: '/img/proyecto_01.webp', // Cambia por tus rutas reales
-    title: 'Branding Identidad Corporativa',
-    category: 'Diseño Estratégico'
+    image: '/limacarwash.webp', // Cambia por tus rutas reales
+    title: 'Lavado de carros Lima Perú',
+    category: 'Mostrar servicios para concretar ventas'
   },
   {
     id: 2,
